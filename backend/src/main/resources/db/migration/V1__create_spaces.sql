@@ -1,0 +1,7 @@
+CREATE TABLE spaces (
+    id CHAR(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    created_at DATETIME(6) NOT NULL,
+    updated_at DATETIME(6) NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARACTER SET utf8mb4;

@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-background: var(--destructive-background);
+  --color-warning: var(--warning);
+  --color-warning-background: var(--warning-background);
+  --color-warning-border: var(--warning-border);
+  --color-success: var(--success);
+  --color-success-background: var(--success-background);
+}
+
+:root {
+  --background: #f7f8f6;
+  --foreground: #182c27;
+  --card: #ffffff;
+  --card-foreground: #182c27;
+  --primary: #20594b;
+  --primary-foreground: #ffffff;
+  --muted: #f1f5f2;
+  --muted-foreground: #65736d;
+  --accent: #edf3ef;
+  --accent-foreground: #20594b;
+  --border: #e4eae6;
+  --input: #d7e1da;
+  --ring: #20594b;
+  --destructive: #b42318;
+  --destructive-background: #fef2f2;
+  --warning: #78350f;
+  --warning-background: #fffbeb;
+  --warning-border: #fde68a;
+  --success: #166534;
+  --success-background: #dcfce7;
+}
+
+.dark {
+  --background: #101a17;
+  --foreground: #e7f0eb;
+  --card: #172620;
+  --card-foreground: #e7f0eb;
+  --primary: #91cbb4;
+  --primary-foreground: #10251c;
+  --muted: #21332b;
+  --muted-foreground: #a7b9af;
+  --accent: #263d32;
+  --accent-foreground: #e7f0eb;
+  --border: #30453a;
+  --input: #3b5246;
+  --ring: #91cbb4;
+  --destructive: #fca5a5;
+  --destructive-background: #421f20;
+  --warning: #fcd79a;
+  --warning-background: #3c2d16;
+  --warning-border: #705125;
+  --success: #a7e5bb;
+  --success-background: #193d2a;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply m-0 bg-background text-foreground antialiased; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  button { cursor: pointer; }
+  button:disabled { cursor: default; }
+}

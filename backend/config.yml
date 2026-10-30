@@ -1,0 +1,25 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 9090
+  adminConnectors:
+    - type: http
+      port: 9091
+
+logging:
+  level: INFO
+  loggers:
+    com.portfoliomanager: DEBUG
+
+database:
+  driverClass: org.mariadb.jdbc.Driver
+  user: root
+  password: root
+  url: jdbc:mariadb://localhost:3306/portfolio_manager
+  properties:
+    hibernate.dialect: org.hibernate.dialect.MariaDBDialect
+    hibernate.jdbc.time_zone: UTC
+  validationQuery: "SELECT 1"
+  initialSize: 1
+  minSize: 1
+  maxSize: 8
